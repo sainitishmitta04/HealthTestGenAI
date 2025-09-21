@@ -15,4 +15,5 @@ sqlalchemy
 pillow
 python-dateutil
 pytz
+json5
 tzdata
