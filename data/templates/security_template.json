@@ -1,0 +1,59 @@
+{
+  "template_type": "security",
+  "name": "Security Test Case Template",
+  "description": "Template for security test cases in healthcare applications",
+  "structure": {
+    "id": "SEC-{counter}",
+    "title": "Security Test: [vulnerability]",
+    "description": "Test for [vulnerability] vulnerability to ensure data security and privacy",
+    "priority": "High",
+    "steps": [
+      "Attempt to [malicious_action]",
+      "Observe system response and logs",
+      "Verify security controls are effective"
+    ],
+    "expected_results": "System should prevent [vulnerability] and respond appropriately with [expected_response]",
+    "test_data": {
+      "malicious_input": "Sample malicious input data",
+      "expected_response": "Expected security response"
+    },
+    "compliance_checks": [
+      {
+        "standard": "ISO 27001",
+        "requirement": "Information security controls implementation",
+        "passed": true,
+        "issue": "",
+        "recommendation": ""
+      },
+      {
+        "standard": "GDPR",
+        "requirement": "Data protection and privacy measures",
+        "passed": true,
+        "issue": "",
+        "recommendation": ""
+      }
+    ]
+  },
+  "placeholders": {
+    "[vulnerability]": "The specific vulnerability being tested, e.g., 'SQL injection'",
+    "[malicious_action]": "The malicious action to perform, e.g., 'inject SQL commands'",
+    "[expected_response]": "The expected system response, e.g., 'error message and request rejection'"
+  },
+  "examples": {
+    "sql_injection": {
+      "title": "Security Test: SQL Injection Vulnerability",
+      "description": "Test for SQL injection vulnerability in login form",
+      "steps": [
+        "Navigate to Login screen",
+        "Enter username: admin' --",
+        "Enter password: any password",
+        "Click Login button"
+      ],
+      "expected_results": "System should reject the request and show generic error message without revealing database structure",
+      "test_data": {
+        "malicious_input": "Username: admin' --, Password: test123",
+        "expected_response": "Login failed error message"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "template_type": "functional",
+  "name": "Functional Test Case Template",
+  "description": "Template for functional test cases in healthcare applications",
+  "structure": {
+    "id": "TC-{counter}",
+    "title": "Test [functionality]",
+    "description": "Verify that [functionality] works as expected according to requirements",
+    "priority": "Medium",
+    "steps": [
+      "Navigate to [screen/page]",
+      "Perform [action] with [test_data]",
+      "Verify [expected_behavior] occurs correctly"
+    ],
+    "expected_results": "[Functionality] should work without errors and produce the correct output",
+    "test_data": {
+      "input_data": "Sample input values",
+      "expected_output": "Expected output values"
+    },
+    "compliance_checks": [
+      {
+        "standard": "FDA",
+        "requirement": "Software validation for intended use",
+        "passed": true,
+        "issue": "",
+        "recommendation": ""
+      }
+    ]
+  },
+  "placeholders": {
+    "[functionality]": "The specific functionality being tested, e.g., 'patient registration'",
+    "[screen/page]": "The relevant screen or page in the application",
+    "[action]": "The user action to perform, e.g., 'click submit button'",
+    "[test_data]": "The test data to use, e.g., 'valid patient details'",
+    "[expected_behavior]": "The expected system response, e.g., 'patient record is created'",
+    "[expected_behavior]": "The expected system response or outcome"
+  },
+  "examples": {
+    "patient_registration": {
+      "title": "Test Patient Registration Functionality",
+      "description": "Verify that patient registration works correctly with valid data",
+      "steps": [
+        "Navigate to Patient Registration screen",
+        "Enter valid patient details: John Doe, 01/01/1980, Male",
+        "Click the Submit button"
+      ],
+      "expected_results": "Patient should be registered successfully with a unique patient ID",
+      "test_data": {
+        "input_data": "First Name: John, Last Name: Doe, DOB: 01/01/1980, Gender: Male",
+        "expected_output": "Patient ID: PAT-12345, Status: Registered"
+      }
+    }
+  }
+}

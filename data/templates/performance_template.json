@@ -1,0 +1,59 @@
+{
+  "template_type": "performance",
+  "name": "Performance Test Case Template",
+  "description": "Template for performance test cases in healthcare applications",
+  "structure": {
+    "id": "PERF-{counter}",
+    "title": "Performance Test: [metric] under [load]",
+    "description": "Test system performance for [metric] under specified load conditions",
+    "priority": "Medium",
+    "steps": [
+      "Set up performance monitoring tools",
+      "Execute [scenario] with [load] load",
+      "Measure response times and resource usage",
+      "Analyze results against performance benchmarks"
+    ],
+    "expected_results": "System should meet performance requirements: [requirements] with [tolerance] tolerance",
+    "test_data": {
+      "load_level": "Specified load level (e.g., 100 concurrent users)",
+      "response_time_threshold": "Maximum acceptable response time in milliseconds",
+      "throughput_requirement": "Required transactions per second",
+      "resource_usage_limits": "CPU, memory, and disk usage limits"
+    },
+    "compliance_checks": [
+      {
+        "standard": "ISO 13485",
+        "requirement": "Process performance validation",
+        "passed": true,
+        "issue": "",
+        "recommendation": ""
+      }
+    ]
+  },
+  "placeholders": {
+    "[metric]": "The performance metric being tested, e.g., 'response time' or 'throughput'",
+    "[load]": "The load condition, e.g., 'normal load' or 'peak load'",
+    "[scenario]": "The test scenario, e.g., 'patient data retrieval'",
+    "[requirements]": "The performance requirements, e.g., 'response time < 2 seconds'",
+    "[tolerance]": "The acceptable tolerance, e.g., '10%'"
+  },
+  "examples": {
+    "response_time": {
+      "title": "Performance Test: Response Time under Normal Load",
+      "description": "Test response time for patient search functionality under normal load",
+      "steps": [
+        "Set up APM tool for monitoring",
+        "Simulate 50 concurrent users searching for patients",
+        "Measure average response time for search requests",
+        "Compare against performance benchmarks"
+      ],
+      "expected_results": "Average response time should be less than 2 seconds with 95% of requests under 3 seconds",
+      "test_data": {
+        "load_level": "50 concurrent users",
+        "response_time_threshold": "2000 ms",
+        "throughput_requirement": "20 transactions/second",
+        "resource_usage_limits": "CPU < 80%, Memory < 70%"
+      }
+    }
+  }
+}
